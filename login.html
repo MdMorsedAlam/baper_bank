@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogIn Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="my-16">
+      <h2 class="text-5xl text-black text-center font-extrabold">
+        Let's Get <span class="text-blue-500">Your Moneeeeey </span>!!
+      </h2>
+    </header>
+    <section>
+      <div class="grid grid-cols-3 gap-14 w-3/4 mx-auto">
+        <!-- Deposit -->
+        <div class="bg-blue-400 p-4 rounded-md text-center">
+          <h1 class="text-4xl text-white font-bold">Deposit</h1>
+          <p id="deposit" class="text-3xl text-white font-semibold my-4">$000</p>
+        </div>
+        <!-- Withdraw -->
+        <div class="bg-orange-400 rounded-md p-4 text-center">
+          <h1 class="text-4xl text-white font-bold">Withdraw</h1>
+          <p id="withdraw" class="text-3xl text-white font-semibold my-4">$000</p>
+        </div>
+        <!-- Balence -->
+        <div class="bg-green-400 rounded-md p-4 text-center">
+          <h1 class="text-4xl text-white font-bold">Balance</h1>
+          <p id="balance" class="text-3xl text-white font-semibold my-4">$1500</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="grid grid-cols-2 gap-14 w-2/4 mx-auto mt-10">
+        <!-- Deposit -->
+        <div class="bg-violet-500 rounded-md p-4 text-center flex flex-col">
+          <h1 class="text-4xl text-white font-bold">Deposit</h1>
+          <input id="depo-inpt" class="p-2 rounded-lg my-4 focus:outline-none" type="text" value="$" />
+          <button id="depo-btn" class="bg-green-600 hover:bg-green-500 rounded-lg font-bold text-lg text-white w-2/4 mx-auto py-2 px-3">Deposit</button>
+        </div>
+        <!-- Withdraw -->
+        <div class="bg-lime-500 rounded-md p-4 text-center flex flex-col">
+          <h1 class="text-4xl text-white font-bold">Withdraw</h1>
+          <input id="wid-inpt" class="p-2 rounded-lg my-4 focus:outline-none" type="text" value="$" />
+          <button id="wid-btn" class="bg-blue-600 hover:bg-blue-500 rounded-lg font-bold text-lg text-white w-2/4 mx-auto py-2 px-3">Withdraw</button>
+        </div>
+      </div>
+    </section>
+    <script>
+        // --------Deposit-----
+        document.getElementById("depo-btn").addEventListener("click",function(){
+    const depoInpt=document.querySelector("#depo-inpt").value;
+    document.getElementById("deposit").innerText=depoInpt;
+
+    let totalBl=document.querySelector("#balance").value;
+    console.log(totalBl+20);
+
+})
+// ---------Withdraw---------
+document.getElementById("wid-btn").addEventListener("click",function(){
+    const depoInpt=document.querySelector("#wid-inpt").value;
+    document.getElementById("withdraw").innerText=depoInpt;
+
+    let totalBl=document.querySelector("#balance").value;
+    console.log(totalBl+20);
+
+})
+    </script>
+  </body>
+</html>
