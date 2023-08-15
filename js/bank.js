@@ -1,18 +1,26 @@
      // --------Deposit-----
      document.getElementById("depo-btn").addEventListener("click",function(){
-        const depoInpt=document.querySelector("#depo-inpt").value;
-        document.getElementById("deposit").innerText=depoInpt;
-    
-        let totalBl=document.querySelector("#balance").value;
-        console.log(totalBl+20);
-    
+        const depoInpt=document.querySelector("#depo-inpt");
+        const depoValueString=depoInpt.value;
+        const inptValue=parseFloat(depoValueString);
+
+        const depoInptString=document.getElementById("deposit").innerText;
+        const depoValue=parseFloat(depoInptString);
+        document.getElementById("deposit").innerText=depoValue+inptValue;
+
+        const blValueString=document.getElementById("balance").innerText;
+        const blValue=parseFloat(blValueString);
+        document.getElementById("balance").innerText=blValue+inptValue;
+
+        depoInpt.value='';
     })
     // ---------Withdraw---------
     document.getElementById("wid-btn").addEventListener("click",function(){
-        const depoInpt=document.querySelector("#wid-inpt").value;
-        document.getElementById("withdraw").innerText=depoInpt;
+        const widInpt=document.querySelector("#wid-inpt");
+        const widValue=widInpt.value;
+        document.getElementById("withdraw").innerText=widValue;
+        widInpt.value='';   
     
-        let totalBl=document.querySelector("#balance").value;
-        console.log(totalBl+20);
+     
     
     })
