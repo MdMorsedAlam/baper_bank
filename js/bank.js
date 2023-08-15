@@ -31,7 +31,7 @@
         const blVal=parseFloat(blString);
         
         if(widInptValue>blVal){
-            alert("Your Withdrawal Amount Is Low");
+            alert("Your Main Balance Is Low");
             return;
         }
         document.getElementById("withdraw").innerText=widValue+widInptValue;
